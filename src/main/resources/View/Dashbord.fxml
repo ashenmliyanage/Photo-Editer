@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="1080" prefWidth="1920" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.DashbordFormController">
+   <children>
+      <Label fx:id="imageLabel" layoutX="44.0" layoutY="62.0" prefHeight="867.0" prefWidth="1808.0" />
+      <Slider fx:id="brightnessSlider" layoutX="64.0" layoutY="959.0" prefHeight="22.0" prefWidth="1802.0" />
+   </children>
+</AnchorPane>
