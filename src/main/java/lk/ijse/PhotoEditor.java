@@ -29,12 +29,28 @@ public class PhotoEditor extends JFrame {
 
         createMenu();
         createBrightnessSlider();
+        createOpenFileButton();
 
         imageLabel = new JLabel();
         add(imageLabel, BorderLayout.CENTER);
-        add(brightnessSlider, BorderLayout.SOUTH);
+
+        JPanel controlPanel = new JPanel();
+        controlPanel.add(brightnessSlider);
+        controlPanel.add(createOpenFileButton());
+        add(controlPanel, BorderLayout.SOUTH);
 
         setVisible(true);
+    }
+
+    private JButton createOpenFileButton() {
+        JButton openFileButton = new JButton("Open Image File");
+        openFileButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                openImage();
+            }
+        });
+        return openFileButton;
     }
 
     private void createBrightnessSlider() {
